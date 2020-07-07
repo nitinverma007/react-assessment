@@ -1,0 +1,47 @@
+.custom-radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    ;
+
+    input {
+        position: absolute;
+        left: -999px;
+
+        &:focus+.icon {
+            box-shadow: 0 0 5px 2px $gray;
+        }
+
+        &:checked+.icon {
+            &:before {
+                content: "";
+            }
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: solid 1px $gray;
+        border-radius: 50%;
+        top: -3px;
+
+        &:before {
+            width: 3px;
+            height: 9px;
+            border-style: solid;
+            border-color: #888888;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            transform: rotate(45deg);
+            left: 7px;
+            position: absolute;
+            top: 2px;
+        }
+    }
+}

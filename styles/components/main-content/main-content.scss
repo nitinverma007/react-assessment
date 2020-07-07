@@ -1,0 +1,19 @@
+.content {
+    flex: 1 1 75%;
+    border: solid 1px $black;
+    border-radius: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+
+    @include mobile() {
+        border-radius: 5px;
+        margin-left: auto;
+        margin-top: 10px;
+        flex:1;
+    }
+
+}
+
+@import "./filtered-items-bar.scss";
+@import "./search-bar.scss";
+@import "./characters-list.scss";

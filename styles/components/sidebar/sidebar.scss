@@ -1,0 +1,110 @@
+@import "./custom-radio.scss";
+
+.sidebar {
+    flex: 1 1 25%;
+    border: solid 1px $black;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: lighten($white, 5%);
+
+    @include mobile() {
+        border-radius: 5px;
+        flex: 1;
+    }
+
+    &.no-filters {
+        .heading-box {
+            @include mobile() {
+                margin: 0;
+                border-bottom: none;
+            }
+
+            .accordion-btn {
+                &::before {
+                    @include mobile() {
+                        content: "+";
+                    }
+                }
+            }
+        }
+
+        .category-box {
+            @include mobile() {
+                display: none;
+            }
+        }
+    }
+
+
+    .heading-box {
+        padding: 20px;
+        background-color: $white;
+        margin: 0 0 20px 0;
+        display: flex;
+
+        .accordion-btn {
+            display: none;
+
+            &::before {
+                display: inline;
+                position: relative;
+                content: "-";
+            }
+
+            @include mobile() {
+                display: inline-block;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                flex-shrink: 1;
+                flex-grow: 0;
+                text-align: center;
+                display: inline-block;
+                box-sizing: border-box;
+                max-width: 30px;
+                max-height: 30px;
+                margin: 0;
+                padding: 0 0 0 2px;
+                line-height: 1;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .sub-heading {
+        flex: 1;
+        margin: 0;
+    }
+
+    .category-box {
+        list-style: none;
+        padding: 0;
+        border: solid 1px $black;
+        border-radius: 5px;
+        margin: 0 20px 20px 20px;
+        position: relative;        
+        background: $white;
+        .category-title {
+            margin: 0;
+            position: relative;
+            top: 25px;
+            transform: translateY(-50%);
+            padding: 10px 0 10px 20px;
+            font-weight: 100;
+        }
+
+        .filter-category {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0 20px;
+
+            li {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

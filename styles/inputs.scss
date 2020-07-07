@@ -1,0 +1,33 @@
+input,
+select,
+button {
+
+    display: inline-block;
+
+    border: solid 1px $gray;
+    color: black;
+    font-family: inherit;
+    outline: none;
+    border-radius: 0;
+
+    &:focus {
+        box-shadow: 0 0 5px 2px #ccc;
+    }
+}
+
+input {
+    height: 35px;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+button,
+select {
+    line-height: 33px;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+select {
+    height: 35px;
+}

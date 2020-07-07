@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: roboto, sans-serif;
+
+}
+
+.clearfix {
+
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.app-wrapper {
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0;
+
+    @include mobile() {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    @include desktop() {
+        width: 1200px;
+    }
+
+    .sub-heading {
+        font-size: 24px;
+        font-weight: 100;
+    }
+}
