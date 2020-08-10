@@ -13,7 +13,7 @@ React Assessment
 
 ### open webpage
 
-http://localhost:8081/
+http://localhost:8080/
 
 ## To build for production env
 
